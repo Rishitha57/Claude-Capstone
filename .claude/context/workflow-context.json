@@ -1,0 +1,29 @@
+{
+  "workflow_id": "WF-2026-001",
+  "project": "AI-Expense-Advisor",
+  "status": "INITIALIZED",
+  "current_stage": "PLANNING",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "title": "Transaction Ingestion",
+      "status": "PENDING"
+    },
+    {
+      "id": "US-002",
+      "title": "Budget Alerts & RAG Advisor",
+      "status": "PENDING"
+    }
+  ],
+  "agents_active": [
+    "sage-business-analyst",
+    "nexus-solution-architect",
+    "aria-solution-engineer",
+    "branch-git-planner",
+    "forge-developer",
+    "shield-automation-tester",
+    "lens-code-reviewer",
+    "deploy-build-engineer",
+    "chronicle-auditor"
+  ]
+}
