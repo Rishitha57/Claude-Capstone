@@ -1,13 +1,57 @@
 {
   "workflow_id": "WF-2026-001",
   "project": "AI-Expense-Advisor",
-  "status": "INITIALIZED",
-  "current_stage": "PLANNING",
+  "status": "IN_PROGRESS",
+  "current_stage": "ENGINEERING",
+  "stages": [
+    {
+      "name": "requirements",
+      "status": "COMPLETED",
+      "completed_at": null,
+      "artifacts": ["docs/requirements.md"]
+    },
+    {
+      "name": "architecture",
+      "status": "COMPLETED",
+      "completed_at": null,
+      "artifacts": ["docs/architecture.md", "docs/design-review.md"]
+    },
+    {
+      "name": "planning",
+      "status": "COMPLETED",
+      "completed_at": null,
+      "artifacts": ["docs/impl-plan.md"]
+    },
+    {
+      "name": "implementation",
+      "status": "IN_PROGRESS",
+      "completed_at": null,
+      "artifacts": ["app/transaction_ingestion.py", "app/confluence_publisher.py"]
+    },
+    {
+      "name": "testing-review",
+      "status": "PENDING",
+      "completed_at": null,
+      "artifacts": ["tests/"]
+    },
+    {
+      "name": "deployment-audit",
+      "status": "PENDING",
+      "completed_at": null,
+      "artifacts": ["docs/workflow-report-WF-2026-001.html"]
+    },
+    {
+      "name": "confluence-sync",
+      "status": "OPTIONAL",
+      "completed_at": null,
+      "artifacts": ["scripts/publish_confluence.py"]
+    }
+  ],
   "user_stories": [
     {
       "id": "US-001",
       "title": "Transaction Ingestion",
-      "status": "PENDING"
+      "status": "IN_PROGRESS"
     },
     {
       "id": "US-002",
@@ -24,6 +68,7 @@
     "shield-automation-tester",
     "lens-code-reviewer",
     "deploy-build-engineer",
-    "chronicle-auditor"
+    "chronicle-auditor",
+    "confluence-publisher"
   ]
 }

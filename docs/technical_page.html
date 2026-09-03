@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>AI-Expense-Advisor Technical Design</title></head>
+<body>
+<h1>AI-Expense-Advisor Technical Design</h1>
+<h2>Pipeline</h2>
+<p>Input adapters feed a typed normalization boundary, followed by budget aggregation and approved-source retrieval.</p>
+<h2>Confluence integration</h2>
+<p>The publisher uses the Confluence Cloud REST API, environment-based credentials, and title-based create-or-update semantics.</p>
+<h2>Security</h2>
+<p>Credentials remain outside source control. Publish failures expose status and a bounded response body, never the API token.</p>
+</body>
+</html>

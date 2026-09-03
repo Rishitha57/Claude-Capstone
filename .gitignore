@@ -1,8 +1,25 @@
-node_modules/
-venv/
+# Python
 __pycache__/
+*.pyc
+.pytest_cache/
+
+# Virtual Env
+.venv/
+venv/
+
+# IDE
+.vscode/
+
+# Secrets
 .env
+
+# Build and tooling
+node_modules/
 dist/
 build/
-.DS_Store
 logs/
+.coverage
+
+# OS
+.DS_Store
+Thumbs.db

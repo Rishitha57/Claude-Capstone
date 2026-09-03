@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>AI-Expense-Advisor Functional Requirements</title></head>
+<body>
+<h1>AI-Expense-Advisor Functional Requirements</h1>
+<h2>US-001: Transaction Ingestion</h2>
+<p>Normalize CSV, JSON, and Plaid-style transaction records into a consistent schema for analysis.</p>
+<h2>US-002: Budget Alerts and AI Advisor</h2>
+<p><strong>As a user, I want personalized budget insights, so that I can improve spending habits.</strong></p>
+<h3>Acceptance criteria</h3>
+<ul><li>Budget thresholds can be configured by spending category and period.</li><li>Alerts are generated when spending reaches or exceeds a configured threshold.</li><li>RAG recommendations use approved financial guidance and include source references.</li><li>Spending trends are analyzed over defined periods and categories.</li></ul>
+<h3>Safety rules</h3>
+<ul><li>Budget arithmetic remains deterministic and independently testable.</li><li>Personal transaction data requires explicit consent before external provider calls.</li><li>Missing guidance is reported without invented citations.</li><li>Recommendations are informational and are not regulated financial advice.</li></ul>
+</body>
+</html>
