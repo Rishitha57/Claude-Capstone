@@ -1,29 +1,85 @@
 {
   "workflow_id": "WF-2026-001",
   "project": "AI-Expense-Advisor",
-  "status": "INITIALIZED",
-  "current_stage": "PLANNING",
+  "status": "COMPLETED",
+  "current_stage": "confluence-sync",
+  "stages": [
+    {
+      "name": "requirements",
+      "status": "APPROVED",
+      "approved_by": "Capstone reviewer",
+      "approved_at": "2026-09-03T00:00:00+00:00",
+      "artifacts": ["docs/requirements.md"],
+      "approval_history": [{"decision": "approved", "reviewer": "Capstone reviewer", "timestamp": "2026-09-03T00:00:00+00:00"}]
+    },
+    {
+      "name": "architecture",
+      "status": "APPROVED",
+      "approved_by": "Capstone reviewer",
+      "approved_at": "2026-09-03T00:00:00+00:00",
+      "artifacts": ["docs/architecture.md", "docs/design-review.md"],
+      "approval_history": [{"decision": "approved", "reviewer": "Capstone reviewer", "timestamp": "2026-09-03T00:00:00+00:00"}]
+    },
+    {
+      "name": "planning",
+      "status": "APPROVED",
+      "approved_by": "Capstone reviewer",
+      "approved_at": "2026-09-03T00:00:00+00:00",
+      "artifacts": ["docs/impl-plan.md"],
+      "approval_history": [{"decision": "approved", "reviewer": "Capstone reviewer", "timestamp": "2026-09-03T00:00:00+00:00"}]
+    },
+    {
+      "name": "implementation",
+      "status": "APPROVED",
+      "approved_by": "Capstone reviewer",
+      "approved_at": "2026-09-03T00:00:00+00:00",
+      "completed_at": null,
+      "artifacts": ["app/transaction_ingestion.py", "app/budget_advisor.py", "app/confluence_publisher.py", "scripts/verify_workflow.py"],
+      "approval_history": [{"decision": "approved", "reviewer": "Capstone reviewer", "timestamp": "2026-09-03T00:00:00+00:00"}]
+    },
+    {
+      "name": "testing-review",
+      "status": "APPROVED",
+      "approved_by": "Capstone reviewer",
+      "approved_at": "2026-09-03T00:00:00+00:00",
+      "completed_at": null,
+      "artifacts": ["tests/", "docs/test-report.md", "docs/review-report.md"],
+      "approval_history": [{"decision": "approved", "reviewer": "Capstone reviewer", "timestamp": "2026-09-03T00:00:00+00:00"}]
+    },
+    {
+      "name": "deployment-audit",
+      "status": "APPROVED",
+      "approved_by": "Capstone reviewer",
+      "approved_at": "2026-09-03T00:00:00+00:00",
+      "completed_at": null,
+      "artifacts": ["docs/workflow-report-WF-2026-001.html"],
+      "approval_history": [{"decision": "approved", "reviewer": "Capstone reviewer", "timestamp": "2026-09-03T00:00:00+00:00"}]
+    },
+    {
+      "name": "confluence-sync",
+      "status": "COMPLETED",
+      "completed_at": "2026-09-03T00:00:00+00:00",
+      "artifacts": ["scripts/publish_all_confluence.py"],
+      "pages_published": [491521, 229594, 524289, 229610, 65692, 557057, 98312, 360453]
+    }
+  ],
   "user_stories": [
     {
       "id": "US-001",
       "title": "Transaction Ingestion",
-      "status": "PENDING"
+      "status": "COMPLETED"
     },
     {
       "id": "US-002",
       "title": "Budget Alerts & RAG Advisor",
-      "status": "PENDING"
+      "status": "COMPLETED"
     }
   ],
   "agents_active": [
-    "sage-business-analyst",
-    "nexus-solution-architect",
-    "aria-solution-engineer",
-    "branch-git-planner",
-    "forge-developer",
-    "shield-automation-tester",
-    "lens-code-reviewer",
-    "deploy-build-engineer",
-    "chronicle-auditor"
+    "business-analyst",
+    "solution-architect",
+    "developer",
+    "tester",
+    "confluence-publisher"
   ]
 }

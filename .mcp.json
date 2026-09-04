@@ -4,9 +4,13 @@
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "."]
     },
-    "postgres": {
+    "jira": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://user:password@localhost:5432/ai_expense_db"]
+      "args": ["-y", "@atlassian/mcp-jira"]
+    },
+    "confluence": {
+      "command": "npx",
+      "args": ["-y", "@atlassian/mcp-confluence"]
     }
   }
 }

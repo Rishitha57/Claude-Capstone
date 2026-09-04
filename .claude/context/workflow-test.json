@@ -1,0 +1,121 @@
+{
+  "workflow_id": "WF-2026-001-TEST",
+  "project": "AI-Expense-Advisor",
+  "status": "IN_PROGRESS",
+  "current_stage": "requirements",
+  "stages": [
+    {
+      "name": "requirements",
+      "status": "APPROVED",
+      "artifacts": [
+        "docs/requirements.md"
+      ],
+      "submitted_at": "2026-09-03T10:19:44.496456+00:00",
+      "approved_by": "Rishitha Mopuru",
+      "approved_at": "2026-09-03T10:20:05.831968+00:00",
+      "approval_history": [
+        {
+          "decision": "approved",
+          "reviewer": "Rishitha Mopuru",
+          "timestamp": "2026-09-03T10:20:05.831968+00:00"
+        }
+      ]
+    },
+    {
+      "name": "architecture",
+      "status": "APPROVED",
+      "artifacts": [
+        "docs/architecture.md",
+        "docs/design-review.md"
+      ],
+      "submitted_at": "2026-09-03T10:20:05.834397+00:00",
+      "approved_by": "Rishitha Mopuru",
+      "approved_at": "2026-09-03T10:20:11.201245+00:00",
+      "approval_history": [
+        {
+          "decision": "approved",
+          "reviewer": "Rishitha Mopuru",
+          "timestamp": "2026-09-03T10:20:11.201245+00:00"
+        }
+      ]
+    },
+    {
+      "name": "planning",
+      "status": "APPROVED",
+      "artifacts": [
+        "docs/impl-plan.md"
+      ],
+      "submitted_at": "2026-09-03T10:20:11.203242+00:00",
+      "approved_by": "Rishitha Mopuru",
+      "approved_at": "2026-09-03T10:20:13.896684+00:00",
+      "approval_history": [
+        {
+          "decision": "approved",
+          "reviewer": "Rishitha Mopuru",
+          "timestamp": "2026-09-03T10:20:13.896684+00:00"
+        }
+      ]
+    },
+    {
+      "name": "implementation",
+      "status": "APPROVED",
+      "artifacts": [
+        "app/transaction_ingestion.py",
+        "app/budget_advisor.py"
+      ],
+      "submitted_at": "2026-09-03T10:20:13.899465+00:00",
+      "approved_by": "Rishitha Mopuru",
+      "approved_at": "2026-09-03T10:20:16.128762+00:00",
+      "approval_history": [
+        {
+          "decision": "approved",
+          "reviewer": "Rishitha Mopuru",
+          "timestamp": "2026-09-03T10:20:16.128762+00:00"
+        }
+      ]
+    },
+    {
+      "name": "testing-review",
+      "status": "APPROVED",
+      "artifacts": [
+        "tests/",
+        "docs/test-report.md",
+        "docs/review-report.md"
+      ],
+      "submitted_at": "2026-09-03T10:20:16.131449+00:00",
+      "approved_by": "Rishitha Mopuru",
+      "approved_at": "2026-09-03T10:20:18.366020+00:00",
+      "approval_history": [
+        {
+          "decision": "approved",
+          "reviewer": "Rishitha Mopuru",
+          "timestamp": "2026-09-03T10:20:18.366020+00:00"
+        }
+      ]
+    },
+    {
+      "name": "deployment-audit",
+      "status": "APPROVED",
+      "artifacts": [
+        "docs/workflow-report-WF-2026-001.html"
+      ],
+      "submitted_at": "2026-09-03T10:20:18.368321+00:00",
+      "approved_by": "Rishitha Mopuru",
+      "approved_at": "2026-09-03T10:20:21.596418+00:00",
+      "approval_history": [
+        {
+          "decision": "approved",
+          "reviewer": "Rishitha Mopuru",
+          "timestamp": "2026-09-03T10:20:21.596418+00:00"
+        }
+      ]
+    },
+    {
+      "name": "confluence-sync",
+      "status": "OPTIONAL",
+      "artifacts": [
+        "scripts/publish_all_confluence.py"
+      ]
+    }
+  ]
+}
