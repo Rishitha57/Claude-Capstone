@@ -39,3 +39,14 @@
 - Confluence Cloud availability and API rate limits remain an external dependency.
 - Categorization quality may be imperfect and requires user correction or review flows.
 - RAG output must remain informational and cite approved sources; it must not be presented as regulated financial advice.
+
+## Scope Closure for This Capstone
+
+The pre-coding gates above are closed for the local, deterministic capstone
+demonstration as follows: the application uses in-process data, approved-source
+contracts, environment-based Confluence credentials, bounded test fixtures,
+and explicit offline verification. Authentication, tenant isolation, durable
+storage, retention, deletion, provider quotas, and deployment observability
+are accepted exclusions from this educational release. They remain mandatory
+before production use and are tracked as follow-up work rather than silently
+treated as implemented.

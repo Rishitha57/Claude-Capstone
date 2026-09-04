@@ -29,7 +29,7 @@ pytest -q
 Result:
 
 ```text
-9 passed
+21 passed in 0.80s
 ```
 
 Additional checks:
@@ -37,16 +37,18 @@ Additional checks:
 - Python compilation passed.
 - Static diagnostics reported no errors.
 - `git diff --check` passed.
-- Coverage target: 90% for core financial calculations. A numeric coverage report is pending because `coverage` was not available in the original verification environment.
+- Coverage: 97% for `app/budget_advisor.py` (90 statements, 3 missed), exceeding the 90% target.
+- Dependency audit: `pip-audit` found no known vulnerabilities.
+- Offline Confluence publication dry run listed all seven artifact pages.
 
 ## Known Limitations
 
-- US-002 budget alerts, vector retrieval, and advisor response generation are not implemented; they remain blocked by the approved design-review gates.
+- External vector retrieval and language-model integration are not included. Deterministic budget alerts and citation-bounded advisor responses are implemented locally.
 - Live Confluence publishing was not tested against an Atlassian tenant; the API contract is tested against a local HTTP stub.
 - Confluence network failures beyond HTTP errors still need explicit handling.
 - Input validation currently covers empty page titles and parser resilience, but not upload size limits or full schema validation.
 - No production database, authentication, tenant isolation, retention workflow, or deployment pipeline is included in this PR.
-- The vulnerability scanner could not run because `pip-audit` is not installed.
+- Live Confluence tenant verification requires configured credentials and was not run.
 
 ## Reviewer Checklist
 

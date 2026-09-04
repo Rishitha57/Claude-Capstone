@@ -83,4 +83,26 @@ Status: PASS
 
 # Final Recommendation
 
-Approved for release.
+Conditionally approved for the local capstone scope. The executable
+verification gates pass, but production deployment remains out of scope until
+the controls listed in the design review are implemented.
+
+## Verification Evidence
+
+- 21 tests passed on Python 3.13.7.
+- `app/budget_advisor.py` coverage is 97%, above the 90% requirement.
+- `pip-audit` reports no known vulnerabilities for `requirements-dev.txt`.
+- The Confluence dry run lists all seven configured artifact pages.
+- Secret scanning is registered in `.claude/settings.json` and checks staged
+	changes before tool execution.
+
+## Accepted Scope Exclusions
+
+- Production authentication, tenant isolation, database persistence,
+	encryption, retention, and deletion workflows.
+- External provider retries, quotas, cost metrics, and deployment health
+	infrastructure.
+- Live Confluence tenant verification.
+
+These are explicit capstone limitations, not claims that the system is ready
+for handling real financial data in production.

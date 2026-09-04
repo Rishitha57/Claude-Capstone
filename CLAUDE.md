@@ -2,16 +2,15 @@
 
 ## Capstone Overview: Automated Documentation Sync & Confluence Integration
 
-This project follows an 8-step Agentic SDLC pipeline driven by Claude agent personas, rules, and commands:
+This project follows a 7-stage Agentic SDLC pipeline driven by agent personas and workflow commands:
 
-- **Step 1: Requirements**: `docs/requirements/requirements.md`
-- **Step 2: Architecture**: `docs/architecture/architecture.md`
-- **Step 3: Design Review**: `docs/design/design-review.md`
-- **Step 4: Implementation Planning**: `docs/plans/impl-plan.md`
-- **Step 5: Implementation**: US-001 Transaction Ingestion and US-002 Budget Alerts & RAG
-- **Step 6: Review**: code quality and security review checklist
-- **Step 7: Verify**: test suite and output verification
-- **Step 8: PR & Confluence Sync**: PR generation and Confluence reporting
+- **Stage 1: Requirements**: `docs/requirements.md`
+- **Stage 2: Architecture and Design Review**: `docs/architecture.md` and `docs/design-review.md`
+- **Stage 3: Planning**: `docs/impl-plan.md`
+- **Stage 4: Implementation**: US-001 Transaction Ingestion and US-002 Budget Alerts & RAG
+- **Stage 5: Testing and Review**: `docs/test-report.md` and `docs/review-report.md`
+- **Stage 6: Deployment and Audit**: `docs/workflow-report-WF-2026-001.html`
+- **Stage 7: Confluence Sync**: `scripts/publish_all_confluence.py`
 
 ## Confluence Integration
 
@@ -29,10 +28,15 @@ This project follows an 8-step Agentic SDLC pipeline driven by Claude agent pers
 
 All development follows the agent personas in `.claude/agents/`. Run the workflow instructions from `.claude/commands/run-sdlc-workflow.md`.
 
+When using Claude Code, start it from the repository root with `claude`.
+Claude loads this file and the project-local `.claude/` commands automatically.
+Use `/run-project` to run the self-contained verification workflow. Use
+`/run-sdlc-workflow` to advance the approval-gated SDLC stages.
+
 ## Coding Standards
 
 - Use strict Python typing and document public functions with docstrings.
 - Keep budget arithmetic deterministic and independently testable.
 - Handle malformed transaction input without unhandled batch exceptions.
 - Maintain at least 90% coverage for core financial calculations.
-- Run `.claude/hooks/check-secrets.sh` before committing staged changes.
+- Keep credentials in environment variables and never commit `.env`.

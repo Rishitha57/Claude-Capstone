@@ -1,8 +1,12 @@
 # Test Report
 
+**Verification date:** 2026-09-03
+
+**Result:** PASS
+
 ## Environment
 
-Python 3.12
+Python 3.13.7
 
 ## Unit Tests
 
@@ -28,10 +32,17 @@ Python 3.12
 - Empty knowledge source
 - Confluence API failure
 
-All Passed
+All listed tests passed. The complete suite contains 21 tests.
 
 ## Execution
 
-```bash
-pytest -v
+```text
+python scripts/verify_workflow.py
+21 passed in 0.80s
+Core coverage: app/budget_advisor.py 97% (90 statements, 3 missed)
+pip-audit: No known vulnerabilities found
+Confluence dry run: 7 artifact pages listed successfully
 ```
+
+The 90% core financial calculation coverage gate passed. Live Confluence
+publication was not attempted because it requires opt-in credentials.

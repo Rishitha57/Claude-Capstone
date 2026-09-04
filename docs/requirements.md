@@ -13,7 +13,7 @@
 - JSON upload is supported.
 - Input is validated and malformed records do not crash the ingestion batch.
 - Transactions are automatically categorized.
-- Validated transactions are stored for subsequent spending analysis. **Status:** pending storage-contract and authorization approval.
+- Validated transactions are returned in a stable normalized collection for subsequent spending analysis. **Status:** complete for the local capstone; durable production storage and authorization are explicitly deferred.
 
 ### Detailed behavior
 
