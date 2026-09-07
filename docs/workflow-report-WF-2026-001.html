@@ -1,25 +1,62 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><title>AI-Expense-Advisor Workflow Report WF-2026-001</title></head>
+<head><meta charset="utf-8"><title>AI-Expense-Advisor Workflow Report WF-2026-003</title></head>
 <body>
 <h1>AI-Expense-Advisor Workflow Report</h1>
-<p><strong>Workflow:</strong> WF-2026-001</p>
+<p><strong>Workflow:</strong> WF-2026-003</p>
 <p><strong>Project:</strong> AI-Expense-Advisor</p>
+<p><strong>Date:</strong> 2026-09-07</p>
+<p><strong>Reviewer:</strong> rishitha</p>
+
 <h2>Scope</h2>
-<ul><li>US-001: Transaction ingestion and categorization.</li><li>US-002: Budget alerts and cited RAG advice.</li></ul>
-<h2>Evidence</h2>
-<h2>Verification</h2>
 <ul>
-<li>Verification date: 2026-09-03.</li>
-<li>Python 3.13.7; 21 tests passed.</li>
-<li>Core budget calculation coverage: 97%.</li>
-<li>pip-audit: no known vulnerabilities found.</li>
-<li>Offline Confluence publication: seven artifact pages listed successfully.</li>
+  <li>US-001: Transaction ingestion and categorization (CSV, JSON, Plaid-style).</li>
+  <li>US-002: Budget alerts and cited RAG advice.</li>
 </ul>
+
+<h2>Stage Approvals</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead><tr><th>Stage</th><th>Status</th><th>Approved By</th><th>Timestamp</th></tr></thead>
+  <tbody>
+    <tr><td>Requirements</td><td>APPROVED</td><td>rishitha</td><td>2026-09-07T07:53:49Z</td></tr>
+    <tr><td>Architecture</td><td>APPROVED</td><td>rishitha</td><td>2026-09-07T07:54:52Z</td></tr>
+    <tr><td>Planning</td><td>APPROVED</td><td>rishitha</td><td>2026-09-07T07:55:28Z</td></tr>
+    <tr><td>Implementation</td><td>APPROVED</td><td>rishitha</td><td>2026-09-07T07:59:13Z</td></tr>
+    <tr><td>Testing &amp; Review</td><td>APPROVED</td><td>rishitha</td><td>2026-09-07T08:01:42Z</td></tr>
+    <tr><td>Deployment &amp; Audit</td><td>APPROVED</td><td>rishitha</td><td>2026-09-07T08:02:18Z</td></tr>
+    <tr><td>Confluence Sync</td><td>APPROVED</td><td>rishitha</td><td>2026-09-07T08:05:45Z</td></tr>
+  </tbody>
+</table>
+
+<h2>Verification Evidence</h2>
+<ul>
+  <li>Verification date: 2026-09-07.</li>
+  <li>Python 3.14; 23 tests passed in 0.77s.</li>
+  <li>Core budget calculation coverage: 97% (threshold: 90%).</li>
+  <li>pip-audit: no known vulnerabilities found.</li>
+  <li>Offline Confluence dry-run: 7 artifact pages listed successfully.</li>
+</ul>
+
+<h2>Artifacts</h2>
+<ul>
+  <li>docs/requirements.md — US-001 and US-002 acceptance criteria</li>
+  <li>docs/architecture.md — component and data-flow diagram</li>
+  <li>docs/design-review.md — findings, decisions, gates, and scope closure</li>
+  <li>docs/impl-plan.md — dependency-ordered 10-task implementation plan</li>
+  <li>app/transaction_ingestion.py — CSV, JSON, Plaid ingestion and normalization</li>
+  <li>app/budget_advisor.py — deterministic alerts, trend analysis, advisor protocol</li>
+  <li>app/confluence_publisher.py — idempotent Confluence REST publisher</li>
+  <li>scripts/verify_workflow.py — 5-gate local verification runner</li>
+  <li>docs/test-report.md — unit, integration, and edge-case test results</li>
+  <li>docs/review-report.md — 7-section code review, conditionally approved</li>
+</ul>
+
 <h2>Scope Decision</h2>
-<p>The local capstone workflow is approved conditionally. Production authentication,
+<p>The local capstone workflow WF-2026-003 is approved conditionally. All five
+pre-deployment stages passed human review gates. Production authentication,
 persistence, tenant isolation, retention, deletion, provider quotas, and live
 Confluence verification remain explicitly out of scope and must not be inferred
-from this local report.</p>
+from this local report. These controls are tracked as mandatory follow-up work
+before any production deployment.</p>
 </body>
 </html>

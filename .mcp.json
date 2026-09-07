@@ -1,5 +1,9 @@
 {
   "mcpServers": {
+    "sdlc-workflow-engine": {
+      "command": "python",
+      "args": ["scripts/sdlc_mcp_server.py"]
+    },
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "."]
